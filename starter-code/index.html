@@ -84,7 +84,7 @@
                   <a ng-href="http://www.reddit.com/{{result.data.permalink}}"><button class="btn btn-primary">View Post </button></a>
                   </td>
                   <td><a ng-href="https://www.reddit.com/user/{{result.data.author}}">{{result.data.author}}</a></td>
-                  <td>{{result.data.subreddit}}</td>
+                  <td><a ng-href="https://www.reddit.com/r/{{result.data.subreddit}}">{{result.data.subreddit}}</a></td>
                   <td><button type="button" class="btn btn-primary">{{result.data.num_comments}}</button></td>
                 </tr>
               </tbody>
