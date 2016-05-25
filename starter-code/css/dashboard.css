@@ -155,3 +155,7 @@ body {
     background-color: lightgray;
     border-color: black;
 }
+
+body > div > div > div > div.col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main > div.row.placeholders{
+  margin: 0 auto;
+}
