@@ -70,6 +70,7 @@ body {
 }
 
 
+
 /*
  * Main content
  */
@@ -85,6 +86,11 @@ body {
 }
 .main .page-header {
   margin-top: 0;
+}
+
+.thumb {
+  width: 75%;
+
 }
 
 

@@ -4,8 +4,6 @@ redditApp.controller('SearchCtrl', ['$scope', '$http', function($scope, $http) {
   $scope.searchTerm = '';
    $scope.results = {};
 
-
-
   $scope.search = function() {
     var req = {
       url: "http://www.reddit.com/search.json?q=" + $scope.searchTerm, 
