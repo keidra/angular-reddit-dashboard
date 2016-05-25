@@ -31,7 +31,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Clear</a></li>
+            <li><a href="#" class="clear" data-ng-click="clearSearch()">Clear</a></li>
           </ul>
           <form ng-submit="search()" class="navbar-form navbar-right">
             <input type="text" class="form-control" ng-model="searchTerm" placeholder="Search...">
@@ -80,7 +80,7 @@
                   <br>
                   <a ng-href="http://www.reddit.com/{{result.data.permalink}}"><button class="btn btn-primary">Read Post </button></a>
                   </td>
-                  <td>{{result.data.author}}</td>
+                  <td><a ng-href="https://www.reddit.com/user/{{result.data.author}}">{{result.data.author}}</a></td>
                   <td>{{result.data.subreddit}}</td>
                   <td><button type="button" class="btn btn-primary">{{result.data.num_comments}}</button></td>
                 </tr>

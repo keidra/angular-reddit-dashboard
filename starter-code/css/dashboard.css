@@ -136,6 +136,17 @@ body {
   background: none;
 }
 
+.navbar-inverse {
+    background-color: silver;
+}
+
+.navbar-inverse .navbar-brand {
+    color: black;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: black;
+}
 
 /*BUTTONS*/
 

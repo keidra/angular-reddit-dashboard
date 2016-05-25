@@ -4,6 +4,9 @@ redditApp.controller('SearchCtrl', ['$scope', '$http', function($scope, $http) {
   $scope.searchTerm = '';
    $scope.results = {};
 
+    $scope.clearSearch = function () {
+        $scope.searchTerm = "";
+    };
 
   $scope.search = function() {
     var req = {
