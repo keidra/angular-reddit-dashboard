@@ -5,6 +5,7 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
+  font-family: 'Oswald', sans-serif;
 }
 
 
@@ -23,6 +24,10 @@ body {
  */
 .navbar-fixed-top {
   border: 0;
+}
+
+#navbar > ul > li > a {
+  margin-right: 30px;
 }
 
 /*
@@ -129,4 +134,13 @@ body {
 .nav-sidebar > li a.deletex:hover{
   color: red;
   background: none;
+}
+
+
+/*BUTTONS*/
+
+.btn-primary {
+    color: black;
+    background-color: lightgray;
+    border-color: black;
 }
