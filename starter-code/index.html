@@ -15,7 +15,7 @@
 
     <div class="container-fluid"> 
       
-      <div ng-controller="SearchCtrl" class="container-fluid"> 
+  <div ng-controller="SearchCtrl" class="container-fluid"> 
     <nav class="navbar navbar-inverse navbar-fixed-top">
      
         <div class="navbar-header">
@@ -75,7 +75,26 @@
           </div>
           <h2 class="sub-header">All Posts</h2>
           <div class="table-responsive">
-          <h1>TITLE:{{results.title}}</h1>
+          <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Photo</th>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Subreddit</th>
+                  <th># of Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="result in results track by $index">
+                  <td><img ng-src="{{result.data.thumbnail}}"/></td>
+                  <td>{{result.data.title}}</td>
+                  <td>{{result.data.author}}</td>
+                  <td>{{result.data.subreddit}}</td>
+                  <td><button type="button" class="btn btn-primary">{{result.data.num_comments}}</button></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
