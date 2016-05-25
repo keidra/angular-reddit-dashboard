@@ -25,30 +25,3 @@ redditApp.controller('SearchCtrl', ['$scope', '$http', function($scope, $http) {
   }  
 
 }]);
-
-function TodoController ($scope) {
-  $scope.saved = localStorage.getItem('todos');
-  $scope.todos = (localStorage.getItem('todos')!==null) ? JSON.parse($scope.saved) : [];
-  localStorage.setItem('todos', JSON.stringify($scope.todos));
-
-  $scope.addTodo = function() {
-    $scope.todos.push({
-      text: $scope.todoText,
-      done: false
-    });
-    $scope.todoText = ''; //clear the input after adding
-    localStorage.setItem('todos', JSON.stringify($scope.todos));
-  };
-
-  $scope.archive = function() {
-    var oldTodos = $scope.todos;
-    $scope.todos = [];
-    angular.forEach(oldTodos, function(todo){
-      if (!todo.done)
-        $scope.todos.push(todo);
-    });
-    localStorage.setItem('todos', JSON.stringify($scope.todos));
-  };
-}
-
-

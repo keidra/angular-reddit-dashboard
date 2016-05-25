@@ -43,9 +43,9 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <h4>History</h4>
-          <ul data-ng-controller="TodoController" class="nav nav-sidebar">
-            <li data-ng-repeat="todo in todos track by $index" class="active"><a href="" class="deletex">x</a><a href="">{{ todo.text }}</a></li>
-            <li><a href="" class="deletex">x</a><a href="">{{ todo.text }}</a></li>
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="" class="deletex">x</a><a href=""></a></li>
+            <li><a href="" class="deletex">x</a><a href=""></a></li>
             <li><a href="" class="deletex">x</a><a href="">{{}}</a></li>
             <li><a href="" class="deletex">x</a><a href="">{{}}</a></li>
             <li><a href="" class="deletex">x</a><a href="">{{}}</a></li>
@@ -54,7 +54,7 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h2 class="sub-header">Featured Posts</h2>
           <div class="row placeholders">
-            <div ng-repeat="result in results | limitTo: 3 track by $index" class="col-xs-6 col-sm-3 col-lg-4 placeholder">
+            <div ng-repeat="result in results | limitTo: 3 track by $index" class="col-xs-6 col-sm-3 col-md-4 col-lg-4 placeholder">
               <img ng-src="{{result.data.thumbnail}}" onerror="this.src='img/nophoto.png'"" class="img-responsive">
               <h4>{{result.data.title}}</h4>
               <span class="text-muted">{{result.data.author}}</span>
